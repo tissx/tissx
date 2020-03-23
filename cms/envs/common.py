@@ -205,10 +205,10 @@ FEATURES = {
     'LICENSING': False,
 
     # Enable the courseware search functionality
-    'ENABLE_COURSEWARE_INDEX': False,
+    'ENABLE_COURSEWARE_INDEX': True,
 
     # Enable content libraries search functionality
-    'ENABLE_LIBRARY_INDEX': False,
+    'ENABLE_LIBRARY_INDEX': True,
 
     # Enable course reruns, which will always use the split modulestore
     'ALLOW_COURSE_RERUNS': True,
@@ -1037,6 +1037,7 @@ INSTALLED_APPS = (
 
     # Waffle related utilities
     'openedx.core.djangoapps.waffle_utils',
+    'mx_programs'
 )
 
 
@@ -1227,7 +1228,7 @@ FILES_AND_UPLOAD_TYPE_FILTERS = {
 }
 
 # Default to no Search Engine
-SEARCH_ENGINE = None
+SEARCH_ENGINE = "search.elastic.ElasticSearchEngine"
 ELASTIC_FIELD_MAPPINGS = {
     "start_date": {
         "type": "date"

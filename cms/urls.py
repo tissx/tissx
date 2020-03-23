@@ -75,6 +75,7 @@ urlpatterns += patterns(
     url(r'^howitworks$', 'howitworks'),
     url(r'^signup$', 'signup', name='signup'),
     url(r'^signin$', 'login_page', name='login'),
+    url(r'^mx_programs/', include('mx_programs.urls')),
     url(r'^request_course_creator$', 'request_course_creator', name='request_course_creator'),
 
     url(r'^course_team/{}(?:/(?P<email>.+))?$'.format(COURSELIKE_KEY_PATTERN), 'course_team_handler'),

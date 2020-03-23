@@ -270,7 +270,13 @@ from openedx.core.lib.courses import course_image_url
               <span class="important-dates-item-text">${course_price}</span>
             </li>
           %endif
-
+            %if course_price :
+            <li class="important-dates-item">
+              <span class="icon fa fa-money" aria-hidden="true"></span>
+              <p class="important-dates-item-title">${_("Price")}</p>
+              <span class="important-dates-item-text">${course_price}</span>
+            </li>
+          %endif
           % if pre_requisite_courses:
           <% prc_target = reverse('about_course', args=[unicode(pre_requisite_courses[0]['key'])]) %>
           <li class="prerequisite-course important-dates-item">

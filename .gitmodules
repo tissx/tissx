@@ -1,0 +1,15 @@
+[submodule "cms/djangoapps/mx_programs"]
+	path = cms/djangoapps/mx_programs
+	url = https://gitlab.com/satorg/mx_programs.git
+[submodule "lms/djangoapps/automatic_email"]
+	path = lms/djangoapps/automatic_email
+	url = https://gitlab.com/satorg/edx_automatic_email.git
+[submodule "lms/djangoapps/mx_archive_courses"]
+	path = lms/djangoapps/mx_archive_courses
+	url = https://gitlab.com/satorg/mx_archive_courses.git
+[submodule "lms/djangoapps/mx_problem_response"]
+	path = lms/djangoapps/mx_problem_response
+	url = https://gitlab.com/satorg/mx_problem_response.git
+[submodule "lms/djangoapps/pushnotification"]
+	path = lms/djangoapps/pushnotification
+	url = https://gitlab.com/satorg/mx_discussion_notification.git

@@ -112,6 +112,15 @@ urlpatterns = (
 
     url(r'^dashboard/', include('learner_dashboard.urls')),
     url(r'^api/experiments/', include('experiments.urls', namespace='api_experiments')),
+    # archived courses link
+    url(r'^archives/?$', 'branding.views.courses', name="archive_courses"),
+    # advanced instructor
+    url(r'^advanced_instructor', include('mx_problem_response.urls')),
+    # automatic email for the subscrive widget api
+    url(r'^automatic_email', include('automatic_email.urls')),
+    url(r'^api/pushnotification/',
+            include('pushnotification.urls', namespace='mx_pushnotification_api')),
+
 )
 
 # TODO: This needs to move to a separate urls.py once the student_account and
