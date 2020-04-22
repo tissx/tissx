@@ -12,12 +12,21 @@
                 <span class="course-code"><%- content.number %></span>
                 <span class="course-title"><%- content.display_name %></span>
             </h2>
+            <% if(org=='TISSx-COOL') { %>
+                    <p>Connected Open Online Learning</p>
+                <% } else { %>
+                    <p></p>
+                <% } %>
             <div class="course-date" aria-hidden="true">
                 <%- interpolate(
                       gettext("Starts: %(start_date)s"),
                       { start_date: start }, true
                     ) %>
             </div>
+            <% if(org=='TISSx-COOL' ) { %>
+                     <div class="price_icon">Free</div>
+            <% }
+             %>
         </section>
         <div class="sr">
             <ul>
