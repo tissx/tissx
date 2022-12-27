@@ -4,7 +4,7 @@
 
 # Fixes bug with installing django-storage required packages
 # https://github.com/pypa/setuptools/issues/951
-setuptools==24.0.3
+setuptools==65.5.1
 
 # OpenStack swift backend for django storage API
 django-storage-swift==1.2.19
